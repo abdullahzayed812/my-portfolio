@@ -1,0 +1,62 @@
+.intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 65vw;
+  display: flex;
+  border-left: 2px solid $light-color;
+  border-right: 2px solid $dark-color;
+  background: linear-gradient(
+    to right,
+    $light-color 50%, $dark-color 50%,
+  ) bottom, linear-gradient(
+    to right,
+    $light-color 50%, $dark-color 50%
+  ) top;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  transition: 1s ease;
+  animation: {
+    name: show-intro-box;
+    duration: 1s;
+    timing-function: ease;
+  }
+  .intro__info {
+    @include flex(space-evenly, flex-start);
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    color: white;
+    & > * {
+      padding: 10px;
+    }
+    & h2 {
+      font-size: 6em;
+    }
+    & h3 {
+      font-size: 3em;
+    }
+    & h4 {
+      font-size: 2em;
+      color: rgba($light-color, 0.5);
+    }
+  }
+  .intro__image {
+    position: relative;
+    width: 50%;
+    & img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      animation: {
+        name: fade-in;
+        duration: 3s;
+        timing-function: ease;
+      }
+    }
+  }
+}

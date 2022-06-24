@@ -1,0 +1,39 @@
+.about-page {
+  @extend %about-work-section;
+  &__image {
+    width: 20vw;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    animation: {
+      name: spaceman-img-move, spaceman-mounted;
+      duration: 5s, 2s;
+      delay: 1.5 0.5;
+      timing-function: ease, ease;
+      iteration-count: infinite, 1;
+    }
+  }
+  &__text {
+    width: 55vw;
+    min-height: 60vh;
+    padding: 2rem;
+    position: relative;
+    left: calc(5rem + 5vw);
+    top: 22%;
+    border: 2px solid $light-color;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    animation: {
+      name: fade-in;
+      duration: 1s;
+    }
+    p {
+      color: rgba($light-color, 0.9);
+      font: {
+        size: calc(0.6rem + 1vw);
+        family: cursive;
+        style: italic;
+      }
+    }
+  }
+}

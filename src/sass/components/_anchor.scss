@@ -1,0 +1,26 @@
+.anchor-box {
+  @include flex(center, center);
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 3rem;
+  transform: translateY(-100%);
+  @include mobile {
+    z-index: 1;
+  }
+  &__chane {
+    font-size: 2rem;
+    transform: rotate(90deg);
+    margin-top: -5px;
+  }
+  &__anchor {
+    font-size: 4rem;
+    margin-top: -5px;
+  }
+}
+.fixed-anchor {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  font-size: 4rem;
+}

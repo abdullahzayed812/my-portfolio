@@ -1,0 +1,60 @@
+.my-skills-page {
+  @include flex(space-evenly, center);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Ubuntu Mono", monospace;
+  &__box {
+    @include flex(space-between, flex-start);
+    flex-direction: column;
+    width: 35vw;
+    height: 70vh;
+    padding: 2rem;
+    border: 2px solid $dark-color;
+    background-color: $light-color;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $dark-color;
+      color: $light-color;
+    }
+    &__title {
+      @include flex(center, center);
+      width: 100%;
+      gap: 10px;
+      font-size: calc(1em + 1vw);
+      svg {
+        font-size: 3rem;
+      }
+    }
+    &__discription {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+    ul li {
+      list-style-type: square;
+      margin-left: 2rem;
+      margin-bottom: 5px;
+      font-size: 1.3rem;
+    }
+    .skills {
+      font-size: 1.3rem;
+      margin-left: 2rem;
+      line-height: 1.3;
+    }
+  }
+  &__particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+

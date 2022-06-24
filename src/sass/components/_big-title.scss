@@ -1,0 +1,9 @@
+.big-title {
+  position: fixed;
+  font-size: calc(5rem + 5vw);
+  color: $big-title-color;
+  z-index: 1;
+  &.in-blog {
+    color: rgb(12 7 6 / 10%);
+  }
+}

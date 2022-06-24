@@ -1,0 +1,8 @@
+.bottom-links {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  @include flex(space-evenly, center);
+}

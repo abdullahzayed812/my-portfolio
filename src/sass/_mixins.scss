@@ -1,0 +1,42 @@
+@mixin desctop {
+  @media only screen and (max-width: $desctop-screen-size) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (max-width: $tablet-screen-size) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media only screen and (max-width: $mobile-screen-size) {
+    @content;
+  }
+}
+@mixin flex($horizontal, $vertical) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+@mixin add-prefixes($property, $value) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+}
+@mixin scale-animation($box-number, $animation-name, $duration) {
+  @for $i from 0 to $box-number {
+    &.animate-scale-#{$i} {
+      animation: {
+        name: #{$animation-name};
+        duration: #{$duration + "s"};
+        delay: calc(#{calc(($duration * $i) / 2) + "s"} + .6s);
+        timing-function: linear;
+      }
+      @if $animation-name == "social-icons" {
+        animation-fill-mode: none;
+      } @else {
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}

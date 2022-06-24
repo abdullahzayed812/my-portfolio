@@ -1,0 +1,46 @@
+.link {
+  animation: {
+    name: move-link;
+    duration: 1s;
+    delay: 1s;
+  }
+  transition: .4s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &.white-color {
+    color: $light-color;
+  }
+  & > h3 {
+    font: {
+      size: 1.3rem;
+      weight: 600;
+    }
+  }
+  &.say-hi-link,
+  &.blog-link,
+  &.work-link {
+    position: absolute;
+  }
+  &.say-hi-link {
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+  }
+  &.blog-link {
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%) rotate(90deg);
+    &:hover {
+      transform: translateY(-50%) rotate(90deg) scale(1.2);
+    }
+  }
+  &.work-link {
+    top: 50%;
+    left: 1.8rem;
+    transform: translateY(-50%) rotate(-90deg);
+    &:hover {
+      transform: translateY(-50%) rotate(-90deg) scale(1.2);
+    }
+  }
+}

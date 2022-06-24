@@ -1,0 +1,40 @@
+.yinyang {
+  @include flex(center, center);
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transition: 1s;
+  cursor: pointer;
+  &.move {
+    top: 85%;
+    left: 92%;
+    svg {
+      width: 120px;
+      height: 120px;
+    }
+    span {
+      display: none;
+    }
+  }
+  svg {
+    width: 200px;
+    height: 200px;
+    animation: {
+      name: rotate-yinyang-icon;
+      duration: 1.3s;
+      direction: linear;
+      iteration-count: infinite;
+      timing-function: linear;
+    }
+  }
+  span {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 1.05rem;
+  }
+}

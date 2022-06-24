@@ -1,0 +1,17 @@
+.blog-page {
+  width: 100vw;
+  background-image: url("../../assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  .container {
+    @include flex(center, center);
+    background-color: rgba($light-color, 0.8);
+  }
+  .blogs-box {
+    width: 60vw;
+    padding: 10rem 0 5rem;
+    position: relative;
+    z-index: 2;
+  }
+}

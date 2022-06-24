@@ -1,0 +1,85 @@
+.work-page {
+  @extend %about-work-section;
+  height: 400vh;
+  &__content {
+    position: fixed;
+    top: 11rem;
+    left: calc(10rem + 15vw);
+    height: 50vh;
+    display: flex;
+    color: white;
+    &__item {
+      @include scale-animation(6, "blog-box", 1);
+      @include flex(space-between, flex-start);
+      flex-direction: column;
+      width: 20rem;
+      height: 50vh;
+      padding: 1.5rem 2rem;
+      margin-right: 8rem;
+      border-radius: 0 50px 0;
+      border: 1px solid $dark-color;
+      color: $dark-color;
+      background-color: $light-color;
+      transition: all 0.3s ease;
+      opacity: 0;
+      &:hover {
+        color: $light-color;
+        border-color: $light-color;
+        background-color: $dark-color;
+        .work-page__content__item__tags {
+          border-top-color: $light-color;
+        }
+        .work-page__content__item__links a:first-child {
+          color: $dark-color;
+          background-color: $light-color;
+        }
+      }
+      &__title {
+        font: {
+          size: calc(1em + 0.5vw);
+          weight: 800
+        }
+      }
+      &__description {
+        font: {
+          size: 1.2rem;
+          weight: 600;
+        }
+      }
+      &__tags {
+        @include flex(flex-start, center);
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+        padding: 5px;
+        border-top: 2px solid $dark-color;
+        span {
+          font-size: 1.1rem;
+        }
+      }
+      &__links {
+        @include flex(space-between, center);
+        width: 100%;
+        & a:first-child {
+          padding: 0.5rem 3rem;
+          font-size: 1.5rem;
+          text-align: center;
+          border-bottom-left-radius: 50px;
+          color: $light-color;
+          background-color: $dark-color;
+        }
+        & a:last-child {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  &__yin-yang {
+    @include flex(center, center);
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 6rem;
+    color: white;
+  }
+}

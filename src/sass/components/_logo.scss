@@ -1,0 +1,14 @@
+.logo {
+  display: inline-block;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  &.white-color {
+    color: $light-color;
+  }
+  font: {
+    family: "Pacifico", cursive;
+    size: 2rem;
+  }
+  z-index: 3;
+}

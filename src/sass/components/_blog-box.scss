@@ -1,0 +1,46 @@
+.blog-box {
+  @include scale-animation(8, "blog-box", 1);
+  @include flex(flex-start, center);
+  flex-direction: column;
+  padding: 15px;
+  border: 2px solid $dark-color;
+  height: 390px;
+  backdrop-filter: blur(4px);
+  transition: 0.5s;
+  opacity: 0;
+  &:hover {
+    background-color: $dark-color;
+    & > * {
+      color: $light-color;
+    }
+    & hr {
+      background-color: $light-color;
+    }
+  }
+  img {
+    height: 200px;  
+  }
+  &__text {
+    @include flex(space-evenly, flex-start);
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    &__name {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    hr {
+      width: 100%;
+      height: 2px;
+      background-color: $dark-color;
+      border: none;
+    }
+    span {
+      margin-right: 10px;
+      font-size: 1.1rem;
+    }
+    .date {
+      font-size: 1.1rem;
+    }
+  }
+}
